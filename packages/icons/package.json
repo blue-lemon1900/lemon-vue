@@ -1,0 +1,60 @@
+{
+  "name": "@vben/icons",
+  "version": "5.0.0",
+  "homepage": "https://github.com/vbenjs/vue-vben-admin",
+  "bugs": "https://github.com/vbenjs/vue-vben-admin/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbenjs/vue-vben-admin.git",
+    "directory": "packages/icons"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@vben-core/icons": "workspace:*",
+    "@vben-core/shadcn-ui": "workspace:^"
+  },
+  "devDependencies": {
+    "@iconify/icons-akar-icons": "catalog:",
+    "@iconify/icons-ant-design": "catalog:",
+    "@iconify/icons-arcticons": "catalog:",
+    "@iconify/icons-bi": "catalog:",
+    "@iconify/icons-bx": "catalog:",
+    "@iconify/icons-carbon": "catalog:",
+    "@iconify/icons-devicon": "catalog:",
+    "@iconify/icons-emojione": "catalog:",
+    "@iconify/icons-eos-icons": "catalog:",
+    "@iconify/icons-fa-brands": "catalog:",
+    "@iconify/icons-fe": "catalog:",
+    "@iconify/icons-flat-color-icons": "catalog:",
+    "@iconify/icons-fluent": "catalog:",
+    "@iconify/icons-fluent-mdl2": "catalog:",
+    "@iconify/icons-ic": "catalog:",
+    "@iconify/icons-icon-park-outline": "catalog:",
+    "@iconify/icons-icon-park-twotone": "catalog:",
+    "@iconify/icons-la": "catalog:",
+    "@iconify/icons-logos": "catalog:",
+    "@iconify/icons-lucide": "catalog:",
+    "@iconify/icons-majesticons": "catalog:",
+    "@iconify/icons-material-symbols": "catalog:",
+    "@iconify/icons-mdi": "catalog:",
+    "@iconify/icons-mingcute": "catalog:",
+    "@iconify/icons-noto": "catalog:",
+    "@iconify/icons-ph": "catalog:",
+    "@iconify/icons-ri": "catalog:",
+    "@iconify/icons-simple-icons": "catalog:",
+    "@iconify/icons-skill-icons": "catalog:",
+    "@iconify/icons-solar": "catalog:",
+    "@iconify/icons-streamline": "catalog:",
+    "@iconify/icons-tabler": "catalog:",
+    "@iconify/icons-uiw": "catalog:",
+    "@iconify/icons-vscode-icons": "catalog:",
+    "@iconify/icons-wpf": "catalog:"
+  }
+}
