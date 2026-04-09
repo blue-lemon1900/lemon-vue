@@ -136,7 +136,7 @@ const [BasicTable, tableApi] = useVbenVxeGrid({
 //   }
 // }
 
-const { apiURL, clientId } = useAppConfig(
+const { apiURL } = useAppConfig(
   import.meta.env,
   import.meta.env.PROD,
 );
@@ -150,8 +150,7 @@ async function handleDownload(row: OssFile) {
   await checkLoginBeforeDownload();
 
   const params = {
-    clientid: clientId,
-    Authorization: `Bearer ${accessStore.accessToken}`,
+    token: `Bearer ${accessStore.accessToken}`,
   };
 
   const downloadLink = `${apiURL}/resource/oss/download/${row.ossId}?${stringify(params)}`;
