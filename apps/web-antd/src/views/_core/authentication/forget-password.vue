@@ -7,6 +7,8 @@ import { computed, ref } from 'vue';
 import { AuthenticationForgetPassword, z } from '@vben/common-ui';
 import { $t } from '@vben/locales';
 
+import FormBg from './form-bg.vue';
+
 defineOptions({ name: 'ForgetPassword' });
 
 const loading = ref(false);
@@ -34,9 +36,11 @@ function handleSubmit(value: Recordable<any>) {
 </script>
 
 <template>
-  <AuthenticationForgetPassword
-    :form-schema="formSchema"
-    :loading="loading"
-    @submit="handleSubmit"
-  />
+  <FormBg>
+    <AuthenticationForgetPassword
+      :form-schema="formSchema"
+      :loading="loading"
+      @submit="handleSubmit"
+    />
+  </FormBg>
 </template>

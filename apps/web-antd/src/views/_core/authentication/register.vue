@@ -2,10 +2,12 @@
 import type { VbenFormSchema } from '@vben/common-ui';
 import type { Recordable } from '@vben/types';
 
-import { computed, h, ref } from 'vue';
+import { computed, ref } from 'vue';
 
 import { AuthenticationRegister, z } from '@vben/common-ui';
 import { $t } from '@vben/locales';
+
+import FormBg from './form-bg.vue';
 
 defineOptions({ name: 'Register' });
 
@@ -57,27 +59,6 @@ const formSchema = computed((): VbenFormSchema[] => {
       fieldName: 'confirmPassword',
       label: $t('authentication.confirmPassword'),
     },
-    {
-      component: 'VbenCheckbox',
-      fieldName: 'agreePolicy',
-      renderComponentContent: () => ({
-        default: () =>
-          h('span', [
-            $t('authentication.agree'),
-            h(
-              'a',
-              {
-                class: 'vben-link ml-1 ',
-                href: '',
-              },
-              `${$t('authentication.privacyPolicy')} & ${$t('authentication.terms')}`,
-            ),
-          ]),
-      }),
-      rules: z.boolean().refine((value) => !!value, {
-        message: $t('authentication.agreeTip'),
-      }),
-    },
   ];
 });
 
@@ -87,9 +68,18 @@ function handleSubmit(value: Recordable<any>) {
 </script>
 
 <template>
-  <AuthenticationRegister
-    :form-schema="formSchema"
-    :loading="loading"
-    @submit="handleSubmit"
-  />
+  <FormBg
+    drop-width="580px"
+    drop-height="580px"
+    before-top="80px"
+    before-left="110px"
+    after-top="110px"
+    after-left="140px"
+  >
+    <AuthenticationRegister
+      :form-schema="formSchema"
+      :loading="loading"
+      @submit="handleSubmit"
+    />
+  </FormBg>
 </template>

@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "catalog:",
+    "@fontsource/poppins": "catalog:",
     "@tinymce/tinymce-vue": "catalog:",
     "@vben-core/shadcn-ui": "workspace:*",
     "@vben/access": "workspace:*",

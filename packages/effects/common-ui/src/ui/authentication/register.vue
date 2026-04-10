@@ -88,13 +88,8 @@ defineExpose({
   <div>
     <Title>
       <slot name="title">
-        {{ title || $t('authentication.createAnAccount') }} 🚀
+        {{ title || $t('authentication.createAnAccount') }}
       </slot>
-      <template #desc>
-        <slot name="subTitle">
-          {{ subTitle || $t('authentication.signUpSubtitle') }}
-        </slot>
-      </template>
     </Title>
     <Form />
 

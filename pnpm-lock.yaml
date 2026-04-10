@@ -357,6 +357,9 @@ catalogs:
     globals:
       specifier: ^17.4.0
       version: 17.4.0
+    gsap:
+      specifier: ^3.14.2
+      version: 3.14.2
     happy-dom:
       specifier: ^20.8.4
       version: 20.8.9
@@ -702,6 +705,9 @@ importers:
       '@ant-design/icons-vue':
         specifier: 'catalog:'
         version: 7.0.1(vue@3.5.31(typescript@5.9.3))
+      '@fontsource/poppins':
+        specifier: ^5.2.7
+        version: 5.2.7
       '@tinymce/tinymce-vue':
         specifier: 'catalog:'
         version: 6.3.0(tinymce@7.9.1)(vue@3.5.31(typescript@5.9.3))
@@ -1528,6 +1534,9 @@ importers:
       '@vueuse/core':
         specifier: 'catalog:'
         version: 14.2.1(vue@3.5.31(typescript@5.9.3))
+      gsap:
+        specifier: 'catalog:'
+        version: 3.14.2
       vue:
         specifier: ^3.5.30
         version: 3.5.31(typescript@5.9.3)
@@ -3324,6 +3333,9 @@ packages:
 
   '@floating-ui/vue@1.1.11':
     resolution: {integrity: sha512-HzHKCNVxnGS35r9fCHBc3+uCnjw9IWIlCPL683cGgM9Kgj2BiAl8x1mS7vtvP6F9S/e/q4O6MApwSHj8hNLGfw==}
+
+  '@fontsource/poppins@5.2.7':
+    resolution: {integrity: sha512-6uQyPmseo4FgI97WIhA4yWRlNaoLk4vSDK/PyRwdqqZb5zAEuc+Kunt8JTMcsHYUEGYBtN15SNkMajMdqUSUmg==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -6736,6 +6748,9 @@ packages:
   gradient-parser@1.2.0:
     resolution: {integrity: sha512-6ABGa9CR7WR/0pAJicBy5SJkiikbFM6kf/JjykwX7x+t+s8ORWVnlbi6FkHeFFb36yWsjUpHqSYrygd7ofEUqA==}
     engines: {node: '>=0.10.0'}
+
+  gsap@3.14.2:
+    resolution: {integrity: sha512-P8/mMxVLU7o4+55+1TCnQrPmgjPKnwkzkXOK1asnR9Jg2lna4tEY5qBJjMmAaOBDDZWtlRjBXjLa0w53G/uBLA==}
 
   gzip-size@7.0.0:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
@@ -11614,6 +11629,8 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
+  '@fontsource/poppins@5.2.7': {}
+
   '@humanfs/core@0.19.1': {}
 
   '@humanfs/node@0.16.7':
@@ -15155,6 +15172,8 @@ snapshots:
   graceful-fs@4.2.11: {}
 
   gradient-parser@1.2.0: {}
+
+  gsap@3.14.2: {}
 
   gzip-size@7.0.0:
     dependencies:

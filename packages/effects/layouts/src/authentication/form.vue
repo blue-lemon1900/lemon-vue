@@ -9,10 +9,9 @@ defineProps<{
 </script>
 
 <template>
-  <div
-    class="relative flex-col-center bg-background px-6 py-10 lg:flex-initial lg:px-8 dark:bg-background-deep"
-  >
+  <div class="relative">
     <slot></slot>
+
     <!-- Router View with Transition and KeepAlive -->
     <RouterView v-slot="{ Component, route }">
       <Transition appear mode="out-in" name="slide-right">
@@ -28,10 +27,7 @@ defineProps<{
     </RouterView>
 
     <!-- Footer Copyright -->
-
-    <div
-      class="absolute bottom-3 flex text-center text-xs text-muted-foreground"
-    >
+    <div class="absolute bottom-3 right-3 flex text-xs text-muted-foreground">
       <slot name="copyright"> </slot>
     </div>
   </div>

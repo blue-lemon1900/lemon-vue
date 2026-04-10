@@ -17,6 +17,7 @@ import { tenantList } from '#/api/system/auth/auth';
 import { captchaImage } from '#/api/system/auth/captcha';
 import { useAuthStore } from '#/store';
 
+import FormBg from './form-bg.vue';
 import InputCaptcha from './input-captcha.vue';
 
 defineOptions({ name: 'Login' });
@@ -59,7 +60,7 @@ async function loadTenant() {
   tenantInfo.value = resp;
   // 选中第一个租户
   if (resp.tenantEnabled && resp.voList.length > 0) {
-    const firstTenantId = resp.voList[0]!.tenantId;
+    const firstTenantId = resp.voList[0]?.tenantId;
     loginFormRef.value?.getFormApi().setFieldValue('tenantId', firstTenantId);
   }
 }
@@ -100,6 +101,7 @@ const formSchema = computed((): VbenFormSchema[] => {
         size: 'large',
         placeholder: $t('authentication.usernameTip'),
         allowClear: true,
+        autocomplete: 'username',
       },
       defaultValue: 'admin',
       fieldName: 'username',
@@ -112,6 +114,7 @@ const formSchema = computed((): VbenFormSchema[] => {
       componentProps: {
         size: 'large',
         placeholder: $t('authentication.passwordTip'),
+        autocomplete: 'current-password',
       },
       defaultValue: '123456',
       fieldName: 'password',
@@ -163,14 +166,16 @@ async function handleAccountLogin(values: LoginAndRegisterParams) {
 </script>
 
 <template>
-  <AuthenticationLogin
-    ref="loginFormRef"
-    :form-schema="formSchema"
-    :loading="authStore.loginLoading"
-    :show-register="false"
-    :show-third-party-login="true"
-    :show-code-login="false"
-    :show-qrcode-login="false"
-    @submit="handleAccountLogin"
-  />
+  <FormBg :show-forget-password="true" :show-register="true">
+    <AuthenticationLogin
+      ref="loginFormRef"
+      :form-schema="formSchema"
+      :loading="authStore.loginLoading"
+      :show-register="false"
+      :show-code-login="false"
+      :show-qrcode-login="false"
+      :show-forget-password="false"
+      @submit="handleAccountLogin"
+    />
+  </FormBg>
 </template>

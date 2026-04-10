@@ -32,6 +32,7 @@ catalog:
   '@eslint-community/eslint-plugin-eslint-comments': ^4.7.1
   '@eslint/js': ^10.0.1
   '@faker-js/faker': ^10.3.0
+  '@fontsource/poppins': ^5.2.7
   '@iconify/icons-akar-icons': ^1.2.19
   '@iconify/icons-ant-design': ^1.2.7
   '@iconify/icons-arcticons': ^1.2.77
@@ -147,6 +148,7 @@ catalog:
   find-up: ^8.0.0
   get-port: ^7.1.0
   globals: ^17.4.0
+  gsap: ^3.14.2
   h3: ^1.15.8
   happy-dom: ^20.8.4
   html-minifier-terser: ^7.2.0
